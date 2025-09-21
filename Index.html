@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eco Mobility – Meshy Prompt Launcher</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Eco Mobility – Meshy Prompt Launcher</h1>
+    <p>Pick a template, tweak details, copy the prompt, then open Meshy.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="grid two">
+        <label>Category
+          <select id="category"></select>
+        </label>
+        <label>Variation
+          <select id="variation"></select>
+        </label>
+      </div>
+
+      <details open>
+        <summary>Optional Specs</summary>
+        <div class="grid three">
+          <label>Battery Voltage (V)
+            <input id="voltage" type="number" inputmode="numeric" placeholder="72" />
+          </label>
+          <label>Capacity (Ah)
+            <input id="capacity" type="number" inputmode="numeric" placeholder="60" />
+          </label>
+          <label>Motor Power (kW)
+            <input id="power" type="number" step="0.1" inputmode="decimal" placeholder="8" />
+          </label>
+          <label>Controller Brand
+            <input id="controller" type="text" placeholder="Kelly / Sevcon / Sabvoton" />
+          </label>
+          <label>Finish / Style
+            <input id="finish" type="text" placeholder="matte black, metallic blue, LED accents" />
+          </label>
+          <label>Notes
+            <input id="notes" type="text" placeholder="extra features, scene, camera, etc." />
+          </label>
+        </div>
+      </details>
+
+      <details>
+        <summary>Descriptor Pack (add realism & presentation)</summary>
+        <div class="grid two">
+          <label><input type="checkbox" class="desc" value="materials" checked /> Realistic materials & fasteners</label>
+          <label><input type="checkbox" class="desc" value="wiring" checked /> Wiring & safety labels</label>
+          <label><input type="checkbox" class="desc" value="textures" checked /> Subtle wear & manufacturing marks</label>
+          <label><input type="checkbox" class="desc" value="lighting" checked /> Studio lighting & stage</label>
+          <label><input type="checkbox" class="desc" value="cameras" /> Multi-angle camera callouts</label>
+          <label><input type="checkbox" class="desc" value="exploded" /> Exploded-view variant</label>
+          <label><input type="checkbox" class="desc" value="colorways" /> Colorway options</label>
+          <label><input type="checkbox" class="desc" value="quality" checked /> Output quality instructions</label>
+        </div>
+      </details>
+
+      <div class="actions">
+        <button id="generate">Generate Prompt</button>
+        <button id="copy">Copy Prompt</button>
+        <a id="openMeshy" href="https://www.meshy.ai/" target="_blank" rel="noopener">Open Meshy</a>
+        <button id="download">Download .txt</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Final Prompt</h2>
+      <textarea id="output" rows="12" spellcheck="false"></textarea>
+    </section>
+  </main>
+
+  <footer>
+    <small>Static, free, and simple. Users design in their own Meshy accounts.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
