@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Sport Trike in Midnight Blue",
+    "category": "Electric Trike (Spyder Conversion)",
+    "template": "Touring",
+    "author": "Chris",
+    "image": "https://example.com/path/to/render1.jpg",
+    "link": "https://example.com/post",
+    "notes": "Rendered in Meshy with descriptor pack + exploded-view."
+  }
+]
